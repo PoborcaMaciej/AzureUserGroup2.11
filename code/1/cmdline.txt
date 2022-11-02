@@ -1,0 +1,2 @@
+az login
+az deployment sub create --location westeurope --template-file 1.bicep --parameters resourceGroupName="testing" --parameters resourceGroupLocation="westeurope"

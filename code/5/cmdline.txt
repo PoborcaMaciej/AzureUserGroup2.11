@@ -1,0 +1,6 @@
+Import-Module ./arm-ttk.psd1
+Test-AzTemplate -TemplatePath /path/to/template
+
+az bicep build --file **/*.bicep
+
+checkov -d .

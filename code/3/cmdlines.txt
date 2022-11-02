@@ -1,0 +1,9 @@
+az bicep publish --file ../code/3/modules/ResourceGroup.bicep --target br:bicepregistrymp.azurecr.io/modules/resourcegroups:0.1
+az bicep publish --file ../code/3/modules/StorageAccount.bicep --target br:bicepregistrymp.azurecr.io/modules/storageaccount:0.1 
+
+az ts create \
+  --name storageSpec \
+  --version "0.1a" \
+  --resource-group testbicep-rg-001 \
+  --location "westeurope" \
+  --template-file ../code/3/modules/StorageAccount.bicep

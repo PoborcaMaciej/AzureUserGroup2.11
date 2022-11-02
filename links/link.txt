@@ -1,0 +1,8 @@
+Bicep resources references: https://learn.microsoft.com/en-us/azure/templates/
+Bicep in VS Studio: https://devblogs.microsoft.com/visualstudio/bicepforvs/
+Bicep in VS Code: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/visual-studio-code?tabs=CLI
+Bicep modules: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/modules
+Container registry: https://learn.microsoft.com/en-us/azure/container-registry/container-registry-get-started-bicep?tabs=CLI
+PrivteRegistry for modules: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/private-module-registry?tabs=azure-powershell
+Bicep template to sec scans: https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-copy-managed-disks/main.bicep
+Arm-ttk for bicep: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/linting-bicep-codes-in-devops-pipeline-arm-ttk/ba-p/1718204
