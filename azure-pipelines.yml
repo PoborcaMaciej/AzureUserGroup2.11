@@ -1,0 +1,34 @@
+trigger:
+- test
+
+pool:
+  vmImage: windows-latest
+
+stages:
+- stage: Lint
+  jobs:
+  - job: LintCode
+    displayName: Lint code
+    steps:
+      - script: |
+          az bicep build --file $(System.DefaultWorkingDirectory)/code/3/3.bicep
+        name: LintBicepCode
+        displayName: Run Bicep linter
+
+- stage: Validate
+  jobs:
+  - job: ValidateBicepCode
+    displayName: Validate Bicep code
+    steps:
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+        deploymentScope: 'Subscription'
+        azureResourceManagerConnection: 'Subskrypcja programu Visual Studio Enterprise — MPN(ff976ff1-fb9a-4806-ae13-7829c81d865a)'
+        subscriptionId: 'ff976ff1-fb9a-4806-ae13-7829c81d865a'
+        location: 'West Europe'
+        templateLocation: 'Linked artifact'
+        csmFile: '$(System.DefaultWorkingDirectory)/code/3/3.bicep'
+        csmParametersFile: '$(System.DefaultWorkingDirectory)/code/3/3.parameters.json'
+        deploymentMode: 'Validation'
+        deploymentName: 'ValidateDeployment'
+
