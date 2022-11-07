@@ -1,10 +1,9 @@
-@description('Generated from /subscriptions/5307496e-acc6-4615-9def-b5edbd8c62e9/resourceGroups/backendrg2/providers/Microsoft.Storage/storageAccounts/backendrgtest')
 resource backendrgtest 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   sku: {
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
-  name: 'backendrgtest1'
+  name: 'backendrgtest14'
   location: 'westeurope'
   tags: {
   }

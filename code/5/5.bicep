@@ -1,9 +1,9 @@
 @description('Administrator Username for the local admin account')
-param virtualMachineAdminUserName string
+param virtualMachineAdminUserName string = 'testuser'
 
 @description('Administrator password for the local admin account')
 @secure()
-param virtualMachineAdminPassword string
+param virtualMachineAdminPassword string = newGuid()
 
 @description('Name of the virtual machine to be created')
 @maxLength(15)
