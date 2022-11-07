@@ -12,7 +12,7 @@
       "value": "StorageV2"
     },
     "storageAccountName": {
-      "value": "satest01pobi"
+      "value": "satesst01pobi"
     },
     "storageAccountSKU": {
       "value": "Standard_LRS"
