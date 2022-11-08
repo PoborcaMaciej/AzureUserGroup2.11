@@ -38,6 +38,7 @@ stages:
         prerelease: false
     - task: ps-rule-assert@2
       inputs:
+        path: './code/3'
         inputPath: '$(System.DefaultWorkingDirectory)/code/3/'
         source: '$(System.DefaultWorkingDirectory)/code/3/'
         modules: 'PSRule.Rules.Azure'
