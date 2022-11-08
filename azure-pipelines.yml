@@ -38,7 +38,7 @@ stages:
         prerelease: false
     - task: ps-rule-assert@2
       inputs:
-        inputPath: '/code/3/'
-        source: '/code/6/PSRule.Rules.Azure-quickstart-main/'
+        inputPath: '$(System.DefaultWorkingDirectory)/code/3/'
+        source: '$(System.DefaultWorkingDirectory)/code/6/PSRule.Rules.Azure-quickstart-main/'
         modules: 'PSRule.Rules.Azure'
         outputFormat: 'None'
