@@ -31,4 +31,14 @@ stages:
         csmParametersFile: '$(System.DefaultWorkingDirectory)/code/3/3.parameters.json'
         deploymentMode: 'Validation'
         deploymentName: 'ValidateDeployment'
-
+    - task: ps-rule-install@2
+      inputs:
+        module: 'PSRule.Rules.Azure'
+        latest: true
+        prerelease: false
+    - task: ps-rule-assert@2
+      inputs:
+        inputPath: '/code/3/'
+        source: '/code/6/PSRule.Rules.Azure-quickstart-main/'
+        modules: 'PSRule.Rules.Azure'
+        outputFormat: 'None''
