@@ -39,6 +39,6 @@ stages:
     - task: ps-rule-assert@2
       inputs:
         inputPath: '$(System.DefaultWorkingDirectory)/code/3/'
-        source: '$(System.DefaultWorkingDirectory)/code/6/PSRule.Rules.Azure-quickstart-main/'
+        source: '$(System.DefaultWorkingDirectory)/code/3/'
         modules: 'PSRule.Rules.Azure'
         outputFormat: 'None'
