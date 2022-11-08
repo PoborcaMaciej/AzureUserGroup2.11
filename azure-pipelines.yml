@@ -15,7 +15,7 @@ stages:
         name: LintBicepCode
         displayName: Run Bicep linter
 
-- stage: Validate
+- stage: test_and_build
   jobs:
   - job: ValidateBicepCode
     displayName: Validate Bicep code
@@ -37,6 +37,7 @@ stages:
         latest: true
         prerelease: false
     - task: ps-rule-assert@2
+      continueOnError: true
       inputs:
         path: './code/3'
         inputPath: '$(System.DefaultWorkingDirectory)/code/3/'
